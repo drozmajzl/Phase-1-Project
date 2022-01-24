@@ -1,0 +1,22 @@
+.book-image {
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        padding: 5px;
+        width: 150px;
+        height: 200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.detail-image{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        height: 25%;
+        width: 25%;
+}
+#book-detail, #comment-display, #new-comment, #comment-title, h3{
+    text-align: center;
+}
+body{
+    background-color: gray;
+}
