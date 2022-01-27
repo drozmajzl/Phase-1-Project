@@ -3,14 +3,14 @@
 
 <head>
   <meta charset="utf-8" />
-  <title>Book Liker</title>
+  <title>Tolkien Books</title>
   <link rel="stylesheet" type="text/css" href="style.css" />
   <script defer type="text/javascript" src="./index.js"></script>
 </head>
 
 <body>
-    <header>
-      <h3>Book Liker</h3>
+    <header id="book-liker">
+      <h3>Tolkien Books</h3>
     </header>
   
     <!-- Book Menu -->
@@ -19,36 +19,55 @@
     
     </div>
   
-    <!-- Song Details -->
-    <div id="book-detail">
-      <img class="detail-image" src='./assets/image-placeholder.jpg'  alt="Insert Name Here" />
-    </header>
-    <article class="media-post" id="201811189">
+  <!--Details-->
+  <div id="container">
+    <div id="box-2">
+    <article class="details" id="201811189">
       <header>
         <h2 class="book-name">Insert Book Title Here</h2>
       </header>
       <h3 class="author">Insert Author</h3>
-      <h4 class="description">Insert Description</h4>
+      <p class="description">Insert Description</p>
+    </article>
+  </div>
+      <!--LIKE-->
+      <div id="box-3">
+        <article id="like-card-contents">
       <footer>
-        <ul>
-          <li class="like">Like! <span class="like-glyph">&#x2661;</span></li>
-        </ul>
+          <p class="like">Like! <span id="like-count">0</span> <span class="like-glyph">&#x2661;</span></p>
       </footer>
-    </div>
-  
+  <!--Comment-->
     <h3 id="comment-title">Comment:</h3>
     <p id='comment-display'>
       No Comments Yet!
     </p>
-  
     <!-- New Comment Form -->
     <form id="new-comment">
-      <h4>Add Comment</h4>
-      <label for="new-comment">Comment: </label>
+      <label for="new-comment">Add Comment: </label>
       <textarea name="new-comment" id="new-comment2"></textarea>
       <input type="submit" value="Send" />
     </form>
-  
+  </article>
+  </div>
+</div>
+    
+    <!-- Detail Image -->
+    <div id="box-1">
+      <img class="detail-image" src='./assets/image-placeholder.jpg'  alt="Insert Name Here" /> 
+    </header>
+    </div>
+ 
   </body>
-  
   </html>
+
+
+
+
+
+
+
+
+
+
+
+ 
