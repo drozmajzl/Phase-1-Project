@@ -3,7 +3,6 @@ const EMPTY_HEART = '♡'
 const FULL_HEART = '♥'
 
 //DECLARE GLOBAL CONSTANTS
-// const imageArray = Array.from(document.querySelectorAll('.book-image'))
 const bookMenu = document.querySelector('#book-menu')
 const detailImage = document.querySelector('.detail-image')
 const bookName = document.querySelector('.book-name')
@@ -45,11 +44,8 @@ function selectBook(book) {
     detailImage.src = `https://covers.openlibrary.org/b/id/${book.covers[0]}-M.jpg`
     detailImage.dataset.key = book.key
     bookName.textContent = book.title
-    
-
     const img = document.querySelector(`.book-image[data-key='${detailImage.dataset.key}']`)
     likeCount.textContent = img.dataset.likeCount
-
     const imgID = img.dataset.id
     commentDisplay.textContent = commentArray[imgID]
 
@@ -74,8 +70,6 @@ function selectBook(book) {
     newComment.addEventListener('submit', addComment)
 }
 
-
-
 function addComment(event) {
     event.preventDefault()
     const img = document.querySelector(`.book-image[data-key='${detailImage.dataset.key}']`)
@@ -83,14 +77,12 @@ function addComment(event) {
     commentArray.splice(imgID, 1, textBox.value)
     commentDisplay.textContent = commentArray[imgID]
     event.target.reset()
-
 }
 
 likeButton.addEventListener("click", () => {
     const currentLikes = Number(likeCount.textContent);
     const incrementedLikes = currentLikes + 1;
     const img = document.querySelector(`.book-image[data-key='${detailImage.dataset.key}']`)
-
     likeCount.textContent = incrementedLikes;
     likeButton.textContent = FULL_HEART;
     img.dataset.likeCount = incrementedLikes
